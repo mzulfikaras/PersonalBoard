@@ -18,11 +18,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::prefix('front')->group( function(){
-    
-    Route::get('/index', [FrontendController::class, 'index'])->name('index');
-
-});
+Route::get('/', [FrontendController::class, 'index'])->name('index');
 
 Route::prefix('back')->group( function() {
 
